@@ -12,25 +12,36 @@ html {
     padding: 0;
 }
 
+.worker-bg {
+    background-image: url('/images/bg-worker.png');
+    background-size: cover;
+    position: absolute;
+    width: 450px;
+    right: 0%;
+    bottom: 0;
+    height: 450px;
+}
+
 .button-orcamento-container {
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     right: 20px;
     padding: 1%;
     background-color: rgb(37, 211, 102);
     border-radius: 100px;
     bottom: 20px;
     z-index: 10000;
+    box-shadow: 0px 0px 10px rgb(35, 192, 93);
 }
 
 .content-divider {
-    width: 20%;
+    width: 10%;
     margin: 1% 0% 1% 0%;
-    height: 3px;
+    height: 2px;
     background-color: rgba(255, 136, 0, 1);
 }
 
@@ -100,6 +111,8 @@ nav {
     background-repeat: no-repeat;
     overflow: hidden;
     display: flex;
+    border-bottom-left-radius: 4%;
+    border-bottom-right-radius: 4%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -137,20 +150,23 @@ nav {
     max-height: 80%;
 }
 
+.absolute-element {
+    position: absolute;
+}
+
 .whatsapp-invite-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
     bottom: 60px;
     left: 4%;
     padding: 0% 30px;
-    z-index: 9999;
+    z-index: 999;
 }
 
 .whatsapp-invite-button {
     gap: 10px;
-    display: flex;  
+    display: flex;
     background-color: rgb(37, 211, 102);
     border: 2px solid rgb(42, 238, 114);
     color: white;
@@ -212,13 +228,24 @@ nav {
 }
 
 .menu-links-desktop a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: black;
+    height: 100%;
+}
+
+.menu-links-desktop a:hover {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(16, 82, 180);
+    height: 100%;
 }
 
 .content-container {
     display: flex;
-    height: 100%;
+    height: fit-content;
     width: 100%;
 }
 
@@ -246,30 +273,85 @@ nav {
     height: 10vh;
 }
 
-.about-section {
+.general-section {
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 60vh;
     margin: 0px 10%;
-    padding: 4% 0% 4% 0%;
-    gap: 20px;
+    padding: 5% 0%;
+    gap: 40px;
     align-items: center;
     justify-content: center;
 }
 
 .about-item {
-    width: 40%;
-    height: 100%;
+    width: 45%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.about-item h2 {
-    font-size: 3em;
+.about-item img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.blog-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.img-blog-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+}
+
+.img-blog-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-title {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 0;
+}
+
+.blog-description {
+    font-size: 0.9em;
+    color: #666;
+    flex-grow: 1;
+    /* Ocupa o espaço disponível, alinhando os botões */
+}
+
+.read-more {
+    text-decoration: none;
+    color: rgba(16, 82, 180, 1);
+    font-weight: bold;
+    margin-top: 15px;
+    /* Garante um espaço acima do botão */
+}
+
+.general-title {
+    font-size: 2.3em;
     width: 100%;
     margin-top: 0px;
     margin-bottom: 10px;
@@ -279,32 +361,21 @@ nav {
     font-style: normal;
 }
 
-
-.about-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 @media (max-width: 768px) {
+    .worker-bg {
+        right: -5%;
+        width: 300px;
+        height: 300px;
+    }
 
-    .about-section {
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        width: 100%;
-        height: 60vh;
-        margin: 0px 10%;
-        padding: 4% 0% 4% 0%;
-        gap: 20px;
-        align-items: center;
-        justify-content: center;
+    .general-section {
+        padding: 10% 0%;
+        margin: 0px 5%;
+        flex-direction: column;
     }
 
     .about-item {
         width: 100%;
-        height: 60%;
-        display: flex;
     }
 
     nav {
