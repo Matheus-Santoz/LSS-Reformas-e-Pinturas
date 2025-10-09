@@ -82,6 +82,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     text-align: left;
@@ -277,6 +278,7 @@ nav {
     }
 
     .fade-bg {
+
         background-image: -moz-linear-gradient(to bottom, rgba(16, 82, 180, 1) 20%, rgba(255, 164, 46, 0) 100%);
         background-image: -webkit-linear-gradient(to bottom, rgba(16, 82, 180, 1) 20%, rgba(255, 164, 46, 0) 100%);
         background-image: linear-gradient(to bottom, rgba(16, 82, 180, 1) 20%, rgba(255, 164, 46, 0) 100%);
@@ -290,8 +292,29 @@ nav {
     }
 
     .spacing-text {
-        width: fit-content;
-        position: absolute;
+        left: 0%;
+    }
+
+    .spacing-text p,
+    .prefix-text {
+        font-family: "Poppins", sans-serif;
+        max-width: 100%;
+        font-size: 1.2em;
+    }
+
+    .button-orcamento-container {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        right: 20px;
+        padding: 1%;
+        background-color: rgb(37, 211, 102);
+        border-radius: 100px;
+        bottom: 20px;
+        z-index: 10000;
     }
 
     .menu-collapse-container {
