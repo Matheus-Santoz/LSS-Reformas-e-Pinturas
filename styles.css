@@ -45,6 +45,17 @@ html {
     padding: 1%;
 }
 
+.target {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .button-orcamento-container i {
     color: white;
 }
