@@ -126,15 +126,11 @@ nav {
     z-index: 0;
 }
 
-
-
 .spacing-text p {
     font-family: "Poppins", sans-serif;
     max-width: 50%;
     font-size: 1.2em;
 }
-
-
 
 .spacing-text {
     z-index: 1;
@@ -309,9 +305,7 @@ nav {
 }
 
 .blog-card {
-    background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -339,7 +333,7 @@ nav {
     font-size: 0.9em;
     color: #666;
     flex-grow: 1;
-    /* Ocupa o espaço disponível, alinhando os botões */
+    margin-bottom: 0;
 }
 
 .read-more {
@@ -347,7 +341,6 @@ nav {
     color: rgba(16, 82, 180, 1);
     font-weight: bold;
     margin-top: 15px;
-    /* Garante um espaço acima do botão */
 }
 
 .general-title {
