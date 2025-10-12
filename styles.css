@@ -1,3 +1,5 @@
+/* 1. estilo global e resets*/
+
 * {
     box-sizing: border-box;
 }
@@ -7,7 +9,6 @@ html {
     margin: 0;
     width: 100%;
     height: 100%;
-
     position: relative;
     padding: 0;
 }
@@ -21,49 +22,12 @@ body {
     padding: 0;
 }
 
-.worker-bg {
-    background-image: url('/images/mascote.png');
-    background-size: cover;
-    position: absolute;
-    width: 450px;
-    right: 0%;
-    bottom: 0;
-    height: 450px;
-}
-
-
-
-.alter-mascot {
-    background-image: url('/images/mascote-cruzado.png');
-}
-
-.work-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-height: 20%;
-}
+/* 1.1 utilitários*/
 
 .center-element {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.button-orcamento-container {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    right: 20px;
-    background-color: rgb(37, 211, 102);
-    border-radius: 100px;
-    bottom: 20px;
-    z-index: 10000;
-    box-shadow: 0px 0px 10px rgb(35, 192, 93);
 }
 
 .content-divider {
@@ -73,51 +37,28 @@ body {
     background-color: rgba(255, 136, 0, 1);
 }
 
-.button-orcamento-container a {
-    display: flex;
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    color: white;
-    margin-bottom: 0;
-    padding: 1%;
+.absolute-element {
+    position: absolute;
 }
 
-.target {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 0.5s ease-in-out;
+.alter-mascot {
+    background-image: url('/images/mascote-cruzado.png');
 }
 
-.fade-left {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: 0.5s ease-in-out;
+.push-bottom {
+    margin-bottom: 30px;
 }
 
-.lazyload-1 {
-    opacity: 0;
-    transition: 0.5s ease-in-out;
-    transition-delay: 1s
-}
+/* 1.2 view port height*/
+.vh-100 { height: 100vh; }
+.vh-75 { height: 75vh; }
+.vh-70 { height: 70vh; }
+.vh-50 { height: 50vh; }
+.vh-25 { height: 25vh; }
+.vh-10 { height: 10vh; }
 
-.lazyload-2 {
-    opacity: 0;
-    transition: 0.5 ease-in-out;
-    transition-delay: 2s
-}
 
-.visible {
-    transform: scale(1);
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.button-orcamento-container i {
-    color: white;
-}
+/* 2. layout principal*/
 
 .upper-header {
     color: white;
@@ -144,25 +85,25 @@ nav {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.video-container {
+.content-container {
     display: flex;
-    width: 45%;
-    height: 100%;
-}
-
-.video-container video {
-    object-fit: cover;
+    height: fit-content;
     width: 100%;
     height: 100%;
 }
 
-
-
-.details-container {
+.general-section {
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-    width: 45%;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0px 10%;
+    padding: 5% 0%;
+    gap: 40px;
     height: 100%;
-    background-color: red;
+    align-items: center;
+    justify-content: center;
 }
 
 .bg-presentation {
@@ -185,50 +126,77 @@ nav {
     z-index: 0;
 }
 
-.spacing-text p {
-    font-family: "Poppins", sans-serif;
-    max-width: 50%;
-    font-size: 1.2em;
+.bg-work {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    color: white;
+    padding: 0;
 }
 
-.work-content {
+.worker-bg {
+    background-image: url('/images/mascote.png');
+    background-size: cover;
     position: absolute;
-    left: 0%;
-    padding: 15px;
-    top: 20%;
-    display: flex;
-    align-items: left;
-    margin: 5px 2%;
-    z-index: 99999;
+    width: 450px;
+    right: 0%;
+    bottom: 0;
+    height: 450px;
 }
 
-
-.spacing-text {
-    z-index: 1;
-    display: block;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: fit-content;
-    text-shadow: none;
+.fade-bg {
+    background-image: linear-gradient(to right, rgba(16, 82, 180, 1) 20%, rgba(255, 164, 46, 0) 100%);
     position: absolute;
-    left: 4%;
-    padding: 0% 30px;
-    max-height: 80%;
+    width: 70%;
+    top: 0;
+    max-height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
 }
 
-.absolute-element {
+.bg-work-image {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    animation: carrossel-img 40s linear infinite alternate;
 }
 
-.whatsapp-invite-container {
+/* 2.1 botoes para contato */
+.button-orcamento-container {
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 60px;
-    left: 4%;
-    padding: 0% 30px;
-    z-index: 999;
+    width: 80px;
+    height: 80px;
+    right: 20px;
+    background-color: rgb(37, 211, 102);
+    border-radius: 100px;
+    bottom: 20px;
+    z-index: 10000;
+    box-shadow: 0px 0px 10px rgb(35, 192, 93);
+}
+
+.button-orcamento-container a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    margin-bottom: 0;
+    padding: 1%;
+}
+
+.button-orcamento-container i {
+    color: white;
 }
 
 .whatsapp-invite-button {
@@ -269,44 +237,28 @@ nav {
     transition: width 0.5s ease;
 }
 
-.spacing-text h1 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    width: fit-content;
-    font-style: normal;
-    font-size: 3em;
-    margin: 0px;
-
+.whatsapp-invite-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 60px;
+    left: 4%;
+    padding: 0% 30px;
+    z-index: 999;
 }
 
-.prefix-text {
-    font-family: "Poppins", sans-serif;
-    margin: 0px;
-    font-weight: 200;
-    letter-spacing: 3px;
-    font-size: 1em;
-    margin: 0px;
+/* 2.2 logo e nav */
+.logo-container {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-
-
-.menu-container-mobile,
-.menu-collapse-container {
-    display: none;
-}
-
-.fade-bg {
-    background-image: -moz-linear-gradient(to right, rgba(16, 82, 180, 1) 20%, rgba(255, 164, 46, 0) 100%);
-    background-image: -webkit-linear-gradient(to right, rgba(16, 82, 180, 1) 20%, rgba(255, 164, 46, 0) 100%);
-    background-image: linear-gradient(to right, rgba(16, 82, 180, 1) 20%, rgba(255, 164, 46, 0) 100%);
-    position: absolute;
-    width: 70%;
-    top: 0;
-    max-height: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
+.logo {
+    height: 70px;
+    width: 70px;
 }
 
 .menu-links-desktop {
@@ -333,81 +285,80 @@ nav {
     height: 100%;
 }
 
-.content-container {
-    display: flex;
-    height: fit-content;
+.menu-container-mobile,
+.menu-collapse-container {
+    display: none;
+}
+
+/* 3. conteúdos textuais*/
+.general-title {
+    font-size: 2.3em;
     width: 100%;
-    height: 100%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+    color: rgba(16, 82, 180, 1);
+    font-weight: 800;
+    font-style: normal;
 }
 
-.vh-100 {
-    height: 100vh;
-}
-
-.vh-75 {
-    height: 75vh;
-}
-
-.vh-70 {
-    height: 70vh;
-}
-
-.vh-50 {
-    height: 50vh;
-}
-
-.vh-25 {
-    height: 25vh;
-}
-
-.vh-10 {
-    height: 10vh;
-}
-
-
-.general-section {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 0px 10%;
-    padding: 5% 0%;
-    gap: 40px;
-    height: 100%;
-    align-items: center;
+.spacing-text {
+    z-index: 1;
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-}
-
-.bg-work {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    color: white;
-    padding: 0;
-}
-
-.bg-work-image {
+    width: fit-content;
+    text-shadow: none;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    animation: carrossel-img 40s linear infinite alternate;
+    left: 4%;
+    padding: 0% 30px;
+    max-height: 80%;
 }
 
-@keyframes carrossel-img {
-    from {
-        transform: translateX(0%);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
+.spacing-text p {
+    font-family: "Poppins", sans-serif;
+    max-width: 50%;
+    font-size: 1.2em;
 }
 
+.spacing-text h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    width: fit-content;
+    font-style: normal;
+    font-size: 3em;
+    margin: 0px;
+}
+
+.prefix-text {
+    font-family: "Poppins", sans-serif;
+    margin: 0px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    font-size: 1em;
+}
+
+.work-content {
+    position: absolute;
+    left: 0%;
+    padding: 15px;
+    top: 20%;
+    display: flex;
+    align-items: left;
+    margin: 5px 2%;
+    z-index: 99999;
+}
+
+.work-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 20%;
+}
+
+/* 3.1 componentes da seção */
 .about-item {
     width: 45%;
     min-height: 100%;
@@ -416,25 +367,19 @@ nav {
     justify-content: center;
 }
 
-.logo-container {
-    width: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.logo {
-    height: 70px;
-    width: 70px;
-}
-
 .about-item img {
     width: 100%;
     height: auto;
     max-height: 450px;
     object-fit: cover;
     border-radius: 8px;
+}
+
+.details-container {
+    display: flex;
+    width: 45%;
+    height: 100%;
+    background-color: red;
 }
 
 .blog-container {
@@ -495,17 +440,6 @@ nav {
     font-weight: bold;
 }
 
-.general-title {
-    font-size: 2.3em;
-    width: 100%;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-family: "Poppins", sans-serif;
-    color: rgba(16, 82, 180, 1);
-    font-weight: 800;
-    font-style: normal;
-}
-
 .wrap-squares {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -523,6 +457,10 @@ nav {
     border-radius: 8px;
 }
 
+.square-item p {
+    width: 70%;
+}
+
 .work-medal {
     content: '';
     position: absolute;
@@ -536,13 +474,49 @@ nav {
     border-radius: 50%;
 }
 
-.square-item p {
-    width: 70%;
+/* 4 animacoes */
+.target {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s ease-in-out;
 }
 
-.push-bottom {
-    margin-bottom: 30px;
+.fade-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: 0.5s ease-in-out;
 }
+
+.lazyload-1 {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    transition-delay: 1s
+}
+
+.lazyload-2 {
+    opacity: 0;
+    transition: 0.5 ease-in-out;
+    transition-delay: 2s
+}
+
+.visible {
+    transform: scale(1);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 4.1 animação do fundo da seção bg-work */
+@keyframes carrossel-img {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* 5. media queries */
 
 @media (max-width: 768px) {
 
@@ -585,8 +559,6 @@ nav {
     }
 
     .fade-bg {
-        background-image: -moz-linear-gradient(to bottom, rgba(16, 82, 180, 1) 20%, rgba(255, 164, 46, 0) 100%);
-        background-image: -webkit-linear-gradient(to bottom, rgba(16, 82, 180, 1) 20%, rgba(255, 164, 46, 0) 100%);
         background-image: linear-gradient(to bottom, rgba(16, 82, 180, 1) 20%, rgba(255, 164, 46, 0) 100%);
         position: absolute;
         top: 0;
@@ -638,7 +610,6 @@ nav {
         left: -100%;
         z-index: 9999;
         position: absolute;
-        z-index: 1;
         transition: left 0.3s ease;
     }
 
@@ -730,6 +701,5 @@ nav {
         border: none;
         background-color: transparent;
         font-size: 1.3em;
-
     }
 }
