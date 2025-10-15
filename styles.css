@@ -485,7 +485,18 @@ nav {
 
 }
 
-
+.work-medal {
+    
+    right: -2%;
+    color: black;
+    top: -10%;
+    padding: 2%;
+    background: gold;
+    box-shadow: 0px 0px 30px rgba(255, 215, 0, 1);
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    border-radius: 50%;
+}
 
 
 .left-content {
@@ -539,25 +550,11 @@ nav {
     align-self: auto;
 }
 
-.services-container {
+.services-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
-
-.work-medal {
-    position: absolute;
-    right: -5%;
-    color: black;
-    top: -40%;
-    padding: 7%;
-    height: 60px;
-    width: 60px;
-    background: gold;
-    box-shadow: 0px 0px 10px rgba(255, 215, 0, 1);
-    font-size: 1.2em;
-    border-radius: 50%;
 }
 
 /* 4.1 animação do fundo da seção bg-work */
