@@ -189,9 +189,10 @@ nav {
     width: 80px;
     height: 80px;
     right: 20px;
-    background-color: rgb(37, 211, 102);
+    background-color: rgb(35, 189, 92);
     border-radius: 100px;
     bottom: 20px;
+    font-size: 2.5em;
     z-index: 10000;
     box-shadow: 0px 0px 10px rgb(35, 192, 93);
 }
@@ -216,8 +217,8 @@ nav {
     position: relative;
     gap: 10px;
     display: flex;
-    background-color: rgb(37, 211, 102);
-    border: 2px solid rgb(42, 238, 114);
+    background-color: rgb(35, 189, 92);
+    border: 2px solid rgb(41, 214, 104);
     color: white;
     padding: 7px 15px;
     align-items: center;
@@ -593,7 +594,7 @@ nav {
 
 .heavy-element {
     margin-top: 60px;
-    background-color: rgb(51, 182, 51);
+    background-color: rgb(35, 189, 92);
     padding: 15px;
     border: 2px solid rgb(37, 211, 102);
     border-radius: 10px;
