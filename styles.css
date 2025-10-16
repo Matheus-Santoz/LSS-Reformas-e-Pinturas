@@ -16,6 +16,7 @@ html {
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
+    padding-top: 25px;
     width: 100%;
     min-height: 100%;
     position: relative;
@@ -72,27 +73,35 @@ body {
 
 .upper-header {
     color: white;
+    background-color: rgb(0, 25, 71);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: fit-content;
-    padding: 5px;
+    height: 25px;
     font-size: 0.8em;
-    background-color: rgb(0, 25, 71);
+    transition: transform 0.4s ease-in-out;
 }
 
 nav {
-    position: sticky;
-    top: 0;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    position: fixed;
+    top: 25px;
+    left: 0;
     width: 100%;
-    background-color: white;
-    z-index: 9999;
+    z-index: 1000;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 18px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out;
 }
 
 .content-container {
@@ -263,9 +272,9 @@ nav {
 
 /* 2.2 logo e nav */
 .logo-container {
-    width: 35%;
+    width: 45%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100%;
 }
@@ -287,7 +296,7 @@ nav {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
     height: 100%;
 }
 
@@ -295,7 +304,7 @@ nav {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: rgb(16, 82, 180);
+    color: rgb(0, 64, 160);
     height: 100%;
 }
 
@@ -367,6 +376,8 @@ nav {
 }
 
 .work-text {
+    
+
     display: flex;
     height: 100%;
     z-index: 99999;
@@ -673,7 +684,7 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background-image: radial-gradient(circle, rgba(16, 82, 180, 0.774), rgba(16, 82, 180, 1));
+    background-image: radial-gradient(circle, rgba(16, 82, 180, 0.699), rgba(16, 82, 180, 1));
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -747,8 +758,33 @@ nav {
     }
 
     nav {
-        justify-content: flex-start;
-        height: 70px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 60px;
+        z-index: 9990;
+        background-color: transparent;
+        backdrop-filter: blur(0px);
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        z-index: 1000;
+        height: 60px;
+        justify-content: space-between;
+    }
+
+    .general-title {
+        justify-content: center;
+    }
+
+    .upper-header {
+        display: none;
+    }
+
+    .logo {
+
+        width: 60px;
+        height: 60px;
     }
 
     .menu-links-desktop {
@@ -833,19 +869,20 @@ nav {
     }
 
     .shadow-menu {
-        width: 100%;
-        height: 100vh;
         position: absolute;
-        top: 0px;
-        left: 100%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
         opacity: 0;
         visibility: hidden;
         background-color: rgba(0, 0, 0, 0.5);
-        z-index: 2;
     }
 
     .menu-ativo {
         left: 0px;
+
         visibility: visible;
         transition: left 0.3s ease, opacity 0.4s ease;
         opacity: 1;
@@ -853,15 +890,17 @@ nav {
     }
 
     .menu-collapse-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10000;
         width: 50%;
         border-bottom-right-radius: 100px;
         height: fit-content;
         display: flex;
-        position: absolute;
         flex-direction: column;
         flex-wrap: wrap;
         background-color: rgb(255, 255, 255);
-        z-index: 9999;
         box-shadow: 10px 0px 15px 5px rgba(0, 0, 0, 0.1);
     }
 
@@ -885,9 +924,6 @@ nav {
         margin-bottom: 10px;
     }
 
-    .upper-header {
-        display: none;
-    }
 
     .exit-icon-container {
         width: 100%;
@@ -908,15 +944,14 @@ nav {
 
     .menu-container-mobile {
         color: black;
-        width: 20%;
         display: flex;
-        justify-content: space-between;
         align-items: center;
         margin: 10px;
         border: none;
-        background-color: transparent;
+        padding: 20px 10px;
         font-size: 1.3em;
     }
+
 
     .blog-container {
         grid-template-columns: repeat(auto-fit, min(100%));
