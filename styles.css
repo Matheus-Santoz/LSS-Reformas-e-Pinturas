@@ -307,9 +307,12 @@ nav {
 .general-title {
     font-size: 2em;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 0px;
     margin-bottom: 10px;
     font-family: "Poppins", sans-serif;
+    text-align: center;
     color: rgba(16, 82, 180, 1);
     font-weight: 800;
     font-style: normal;
@@ -468,16 +471,21 @@ nav {
     padding: 8px;
     min-height: 70px;
     align-items: center;
-    background-color: rgb(255, 255, 255);
     border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.192);
+    backdrop-filter: blur(15px);
+    color: white;
+    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.1);
 }
+
 
 .square-item p {
     justify-content: center;
     display: flex;
     align-items: center;
     font-size: 1em;
-    width: 90%;
+    width: 70%;
     text-align: center;
     font-weight: 500;
     margin: 0px 5%;
@@ -486,7 +494,6 @@ nav {
 }
 
 .work-medal {
-    
     right: -2%;
     color: black;
     top: -10%;
@@ -496,6 +503,49 @@ nav {
     margin-bottom: 20px;
     font-size: 1.2em;
     border-radius: 50%;
+    animation: kick 2s infinite alternate ease-in-out;
+}
+
+.services-text {
+    display: block;
+    flex-wrap: wrap;
+    width: 70%;
+    height: 100%;
+}
+
+.services-text p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+}
+
+
+.alter-square {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(16, 82, 180, 1);
+    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.3);
+}
+
+.alter-square i {
+    color: rgba(16, 82, 180, 1);
+}
+
+@keyframes kick {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+
 }
 
 
@@ -542,19 +592,124 @@ nav {
 }
 
 .heavy-element {
-    margin-top: 90px;
-    background-color: rgb(35, 167, 35);
-    padding: 10px;
+    margin-top: 60px;
+    background-color: rgb(51, 182, 51);
+    padding: 15px;
+    border: 2px solid rgb(37, 211, 102);
     border-radius: 10px;
     width: fit-content;
-    align-self: auto;
 }
 
-.services-container{
+.services-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
     align-items: center;
+}
+
+
+.alter-wrap-squares {
+    width: 100%;
+}
+
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+/* Container de cards na página de serviços */
+.services-page-squares {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 colunas para desktop */
+    color: black;
+    gap: 20px;
+    width: 100%;
+}
+
+.services-page-squares .square-item.service-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid rgba(16, 82, 180, 1);
+    background-color: transparent;
+    color: black;
+    padding: 15px;
+    box-shadow: none;
+}
+
+.service-item h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.service-item p {
+    font-size: 0.9em;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.service-item i {
+    color: rgba(16, 82, 180, 1);
+    margin-right: 15px;
+}
+
+.service-details {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.services-page-squares .last-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-image: radial-gradient(circle, rgba(16, 82, 180, 0.774), rgba(16, 82, 180, 1));
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    justify-content: space-between;
+    box-shadow: none;
+}
+
+.services-page-squares .last-item p {
+    font-size: 1.2em;
+    color: white;
+    width: auto;
+}
+
+.services-page-squares .last-item i {
+    color: white;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.last-item i {
+    color: white;
+    transform: translateX(-30px);
+    margin-left: 10px;
+}
+
+.last-item:hover i {
+    transform: translateX(0px);
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .services-page-squares {
+        grid-template-columns: 1fr;
+        /* Uma coluna em dispositivos móveis */
+    }
 }
 
 /* 4.1 animação do fundo da seção bg-work */
