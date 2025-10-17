@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+textarea {
+  resize: none;
+}
+
 html {
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -521,8 +525,7 @@ footer {
 }
 
 .contact-form form {
-    display: flex;
-    flex-direction: column;
+    display: block;
     width: 40%;
 }
 
