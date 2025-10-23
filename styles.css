@@ -1,11 +1,9 @@
-/* 1. estilo global e resets*/
-
 * {
     box-sizing: border-box;
 }
 
 textarea {
-  resize: none;
+    resize: none;
 }
 
 html {
@@ -154,10 +152,10 @@ footer {
     background-image: url('/images/mascote.png');
     background-size: cover;
     position: absolute;
-    width: 350px;
+    width: 450px;
     right: 0%;
     bottom: 0;
-    height: 350px;
+    height: 450px;
 }
 
 .alter-mascot {
@@ -165,7 +163,7 @@ footer {
 }
 
 .fade-bg {
-    background-image: linear-gradient(to right, rgba(16, 82, 180, 1) 20%, rgba(255, 164, 46, 0) 100%);
+    background-image: linear-gradient(to right, rgb(3, 46, 110) 20%, rgba(3, 46, 110, 0) 100%);
     position: absolute;
     width: 70%;
     top: 0;
@@ -268,7 +266,7 @@ footer {
 
 /* 2.2 logo e nav */
 .logo-container {
-    width: 45%;
+    margin: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -281,11 +279,12 @@ footer {
 }
 
 .menu-links-desktop {
+    margin: auto;
     list-style: none;
     display: flex;
     gap: 40px;
     font-weight: 500;
-    margin-right: 20px;
+    
 }
 
 .menu-links-desktop a {
@@ -518,24 +517,33 @@ footer {
 .contact-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
     color: white;
     width: 100%;
     height: 100%;
 }
 
-.contact-form form {
-    display: block;
-    width: 40%;
+.form-contact input,
+.form-contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+
+}
+
+
+.form-contact {
+    width: 60%;
 }
 
 .regions-attended {
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color: green;
-    justify-content: center;
+    color: white;
     width: 100%;
     height: auto;
 }
@@ -551,6 +559,8 @@ footer {
     border-radius: 50%;
     animation: kick 2s infinite alternate ease-in-out;
 }
+
+
 
 .services-text {
     display: block;
@@ -724,7 +734,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background-image: radial-gradient(circle, rgba(16, 82, 180, 0.699), rgba(16, 82, 180, 1));
+    background-image: radial-gradient(circle, rgba(3, 46, 110, 0.7), rgba(3, 46, 110, 1));
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -757,11 +767,26 @@ footer {
 }
 
 
-@media (max-width: 768px) {
-    .services-page-squares {
-        grid-template-columns: 1fr;
-        /* Uma coluna em dispositivos móveis */
-    }
+.works-concluded {
+    padding: 30px;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.2);
+    color: white;
+    background: rgb(3, 46, 110);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+}
+
+.works-concluded .prefix-text {
+    margin: 0;
+}
+
+.works-concluded-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* 4.1 animação do fundo da seção bg-work */
@@ -775,9 +800,15 @@ footer {
     }
 }
 
-/* 5. media queries */
 
 @media (max-width: 768px) {
+    .form-contact {
+        width: 100%;
+    }
+
+    .services-page-squares {
+        grid-template-columns: 1fr;
+    }
 
     .blog-container {
         justify-content: center;
@@ -795,6 +826,10 @@ footer {
 
     .about-item {
         width: 100%;
+    }
+
+    .footer-divider {
+        padding: 0
     }
 
     nav {
@@ -849,7 +884,7 @@ footer {
 
 
     .fade-bg {
-        background-image: linear-gradient(to bottom, rgba(16, 82, 180, 1) 20%, rgba(255, 164, 46, 0) 100%);
+        background-image: linear-gradient(to bottom, rgb(3, 46, 110) 20%, rgba(3, 46, 110, 0) 100%);
         width: 100%;
 
     }
