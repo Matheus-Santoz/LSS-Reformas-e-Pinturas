@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LSS Pinturas e Reformas - Sobre</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap"
         rel="stylesheet">
-
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
 </head>
 
 <body>
@@ -43,17 +45,18 @@
             </div>
         </div>
         <div class="logo-container">
-            <img src="images/logo-lss.jpeg" class="logo" alt="Logo LSS Pinturas e Reformas LTDA">
+            <img src="images/logo.png" class="logo" alt="Logo LSS Pinturas e Reformas LTDA">
         </div>
         <ul class="menu-links-desktop">
             <li><a href="#">INÍCIO</a></li>
             <li><a href="#">SERVIÇOS</a></li>
             <li><a href="#">GALERIA</a></li>
+            <li><a href="#">BLOG</a></li>
             <li><a href="#">CONTATOS</a></li>
             <div class="whatsapp-invite-container">
                 <button class="whatsapp-invite-button">
                     <i class="fa-solid fa-brands fa-whatsapp fa-2x"></i>
-                    <p>Contato WhatsApp</p>
+                    <p>WhatsApp</p>
                 </button>
             </div>
         </ul>
@@ -75,7 +78,7 @@
         <div class="whatsapp-invite-container">
             <button class="whatsapp-invite-button target fade-left">
                 <i class="fa-solid fa-brands fa-whatsapp fa-2x"></i>
-                Solicite um orçamento pelo WhatsApp
+                Solicitar orçamento pelo WhatsApp
             </button>
         </div>
     </div>
@@ -113,7 +116,7 @@
                     <div class="work-text">
 
                         <i class="fa-solid fa-trophy work-medal"></i>
-                        <h2 class="general-title center-element" style="color: white">
+                        <h2 class="general-title center-element push-bottom" style="color: white">
                             Por que escolher LSS Pinturas?
                         </h2>
                         <div class="wrap-squares">
@@ -224,16 +227,105 @@
             </div>
         </section>
     </div>
-    <div class="works-concluded">
-        <div class="works-concluded-wrapper">
+    <div class="works-concluded target">
+        <div class="works-concluded-wrapper target fade-left">
             <span style="font-size: 40px; font-weight: bolder;">+50</span>
-            <p class="prefix-text">Obras concluídas com sucesso!</p>
+            <p class="complement-text">Obras concluídas com <strong>sucesso!</strong></p>
         </div>
-        <div class="works-concluded-wrapper">
+        <div class="works-concluded-wrapper target fade-right">
             <span style="font-size: 40px; font-weight: bolder;">+50</span>
-            <p class="prefix-text">Clientes satisfeitos!</p>
+            <p class="complement-text">Clientes <strong>satisfeitos!</strong></p>
+        </div>
+    </div>
+    <div id="multiItemCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner target" style="background-color: #3d5197;">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-4 p-0">
+                        <img class="d-block w-100" src="images/square-open-mall.jpeg" alt="4">
+                    </div>
+                    <div class="col-md-4 p-0">
+                        <img class="d-block w-100" src="images/square-open-mall-2.jpeg" alt="5">
+                    </div>
+                    <div class="col-md-4 p-0">
+                        <img class="d-block w-100" src="images/square-open-mall-3.jpg" alt="6">
+                    </div>
+                </div>
+                <div class="carousel-caption d-md-block">
+                    <div class="info-gallery">
+                        <h4>THE SQUARE OPEN MALL</h4>
+                        <div class="location-gallery">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p class="m-0">Lageadinho - Cotia | SP</p>
+                        </div>
+                    </div>
+                    <p>
+                        Trabalho de pintura e revitalização realizado no <strong>The Square Open Mall</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4 p-0">
+                        <img class="d-block w-100" src="images/cond-parc-dom.jpeg" alt="4">
+                    </div>
+                    <div class="col-md-4 p-0">
+                        <img class="d-block w-100" src="images/cond-parc-dom-2.jpeg" alt="5">
+                    </div>
+                    <div class="col-md-4 p-0">
+                        <img class="d-block w-100" src="images/cond-parc-dom-3.jpeg" alt="6">
+                    </div>
+                </div>
+                <div class="carousel-caption d-md-block">
+                    <div class="info-gallery">
+                        <h4>CONDOMÍNIO PARC DOMINIQUE</h4>
+                        <div class="location-gallery">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p class="m-0">Jardim Ester Yolanda - São Paulo | SP</p>
+                        </div>
+                    </div>
+                    <p>
+                        Trabalho de pintura e revitalização realizado no Condomínio <strong>Parc Dominique</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4 p-0">
+                        <img class="d-block w-100" src="images/cond-parc-dom.jpeg" alt="4">
+                    </div>
+                    <div class="col-md-4 p-0">
+                        <img class="d-block w-100" src="images/cond-parc-dom.jpeg" alt="5">
+                    </div>
+                    <div class="col-md-4 p-0">
+                        <img class="d-block w-100" src="images/cond-parc-dom.jpeg" alt="6">
+                    </div>
+                </div>
+                <div class="carousel-caption d-md-block">
+                    <div class="info-gallery">
+                        <h4>Condomínio Parc Dominique</h4>
+
+                    </div>
+                    <p>
+                        Trabalho de pintura e revitalização realizado no condomínio Parc Dominique
+                    </p>
+                </div>
+            </div>
         </div>
 
+        <a class="carousel-control-prev" href="#multiItemCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#multiItemCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
     </div>
     <div class="content-container target">
         <section class="general-section">
@@ -309,14 +401,14 @@
         </section>
     </div>
     <footer>
-        <div class="wrap-footer">
+        <div class="wrap-footer target">
             <p class="complement-text" style="color: white">Entre em contato para</p>
             <h2 class="general-title center-element" style="color: white">Orçamento</h2>
             <div class="content-divider"></div>
             <div class="footer-divider">
                 <div class="contact-form">
                     <form class="form-contact" action="enviar-email.php" method="post">
-                        <h2>Fale Conosco</h2>
+                        <h4>Fale Conosco</h4>
                         <label for="nome">Nome:</label><br>
                         <input type="text" id="nome" name="nome" placeholder="exemplo: João Da Silva" required><br><br>
 
@@ -337,12 +429,21 @@
 
                 </div>
                 <div class="regions-attended">
-                    <h2>Atendemos todas as regiões de São Paulo!</h2>
+                    <h4>Atendemos todas as regiões de São Paulo!</h4>
                 </div>
             </div>
         </div>
     </footer>
 </body>
 <script src="styles.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 
 </html>
