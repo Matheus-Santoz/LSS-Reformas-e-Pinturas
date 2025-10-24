@@ -34,7 +34,7 @@ body {
     width: 10%;
     margin: 1% 0% 1% 0%;
     height: 2px;
-    background-color: rgba(255, 136, 0, 1);
+    background-color: rgb(255, 136, 0);
 }
 
 
@@ -76,7 +76,7 @@ footer {
     flex-wrap: wrap;
     flex-direction: column;
     padding: 40px;
-    background-image: url(images/bg-footer.png);
+    background-image: url(/images/bg-footer.png);
     background-size: cover;
     width: 100%;
     height: auto;
@@ -92,9 +92,27 @@ footer {
     width: 100%;
 }
 
+.communication-items-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.communication-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.communication-item a {
+    color: white;
+    text-decoration: none;
+}
+
 .content-container {
     display: flex;
-    height: fit-content;
+    height: auto;
     width: 100%;
     height: auto;
 }
@@ -105,7 +123,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding: 50px 10%;
+    margin: 50px 10%;
     gap: 40px;
     height: 100%;
     align-items: center;
@@ -547,7 +565,6 @@ footer {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: green;
     color: white;
     width: 100%;
     height: auto;
@@ -689,7 +706,6 @@ footer {
 /* Container de cards na página de serviços */
 .services-page-squares {
     grid-template-columns: repeat(2, 1fr);
-    /* 2 colunas para desktop */
     color: black;
     gap: 20px;
     width: 100%;
@@ -827,19 +843,100 @@ footer {
     margin-bottom: 40px;
 }
 
-.info-gallery{
+.info-gallery {
     display: flex;
     flex-direction: column;
     margin: auto;
     width: fit-content;
 }
 
-.location-gallery{
+.location-gallery {
     display: flex;
     align-items: center;
     gap: 5px;
     color: rgba(255, 255, 255, 0.452);
     justify-content: center;
+}
+
+/*styles da pagina de serviços*/
+.bg-service {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/bg-footer.png');
+    height: auto;
+    width: 100%;
+    margin-top: 105px;
+    padding: 3%;
+}
+
+.bg-repeat-service {
+    background-image: url('/images/bg-repeat-services.png');
+    background-repeat: repeat;
+    background-size: 120px 120px;
+    background-attachment: fixed;
+    width: 100%;
+    height: auto;
+}
+
+.services-wrapper {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.services-page-item {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    color: black;
+    text-decoration: none;
+}
+
+.services-page-item:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.img-service-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.img-service-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-item-title {
+    width: fit-content;
+    margin: auto;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 2% 0px;
+    transition: color .2s ease;
+}
+
+
+.services-page-item:hover .service-item-title {
+    color: rgb(255, 136, 0);
+    text-decoration: none;
+}
+
+
+.service-item-p {
+    color: rgb(54, 54, 54);
 }
 
 /* 4.1 animação do fundo da seção bg-work */
@@ -942,6 +1039,14 @@ footer {
 
     }
 
+    .logo-container {
+        display: none;
+    }
+
+    .logo-container-mobile {
+        width: fit-content;
+    }
+
     .footer-divider {
         grid-template-columns: 1fr;
     }
@@ -1003,6 +1108,10 @@ footer {
         opacity: 0;
         visibility: hidden;
         background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .form-contact {
+        margin-bottom: 12%;
     }
 
     .menu-ativo {
@@ -1069,6 +1178,7 @@ footer {
     .menu-container-mobile {
         color: black;
         display: flex;
+        position: fixed;
         align-items: center;
         margin: 10px;
         border: none;
