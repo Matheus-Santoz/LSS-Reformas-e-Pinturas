@@ -16,6 +16,7 @@ html {
 }
 
 body {
+    overflow-x: hidden;
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding-top: 25px;
@@ -112,6 +113,7 @@ footer {
 }
 
 .content-container {
+    overflow: hidden;
     display: flex;
     height: auto;
     width: 100%;
@@ -144,21 +146,19 @@ footer {
     align-items: center;
     color: white;
     min-height: 70vh;
-    height: auto;
-    padding: 100px 5%;
+    padding: 105px 5%;
     text-align: left;
+}
+
+.back-btn {
+    margin: auto;
+    display: flex;
+    flex-grow: 1;
+    display: none;
 }
 
 .bg-presentation * {
     z-index: 0;
-}
-
-.bg-work {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    color: white;
-    padding: 0;
 }
 
 .worker-bg {
@@ -344,17 +344,11 @@ footer {
     z-index: 1;
     display: block;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
     width: fit-content;
-    text-shadow: none;
-    left: 4%;
     padding: 0% 30px;
-    max-height: 80%;
-    position: static;
     margin: auto;
     width: 100%;
-    border: linear
 }
 
 .spacing-text p {
@@ -391,7 +385,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     z-index: 99999;
-    padding: 0px 5%;
+
     height: auto;
 }
 
@@ -427,7 +421,6 @@ footer {
     display: flex;
     width: 45%;
     height: 100%;
-    background-color: red;
 }
 
 .blog-container {
@@ -546,6 +539,10 @@ footer {
     height: 100%;
 }
 
+.form-contact {
+    width: 60%;
+}
+
 .form-contact input,
 .form-contact textarea {
     width: 100%;
@@ -557,9 +554,11 @@ footer {
 
 }
 
-
-.form-contact {
-    width: 60%;
+.form-contact button {
+   background-color: green;
+   border: none;
+   color: white;
+   padding: 2%;
 }
 
 .regions-attended {
@@ -674,6 +673,7 @@ footer {
 
 
 .heavy-element {
+    color: white;
     margin-top: 30px;
     background-color: rgb(35, 189, 92);
     padding: 15px;
@@ -965,6 +965,8 @@ footer {
         justify-content: center;
     }
 
+
+
     .worker-bg {
         display: none;
     }
@@ -982,6 +984,8 @@ footer {
     .footer-divider {
         padding: 0
     }
+
+
 
     nav {
         position: fixed;
@@ -1048,6 +1052,8 @@ footer {
         width: fit-content;
     }
 
+
+
     .footer-divider {
         grid-template-columns: 1fr;
     }
@@ -1110,6 +1116,8 @@ footer {
         visibility: hidden;
         background-color: rgba(0, 0, 0, 0.5);
     }
+
+
 
     .form-contact {
         margin-bottom: 12%;
@@ -1187,7 +1195,6 @@ footer {
         font-size: 1.3em;
     }
 
-
     .blog-container {
         grid-template-columns: repeat(auto-fit, min(100%));
         justify-items: center;
@@ -1198,6 +1205,15 @@ footer {
         padding: 0;
         margin: 0;
         height: 100%;
+    }
+
+    .back-btn {
+        font-weight: 800;
+        display: flex;
+    }
+
+    .content-container {
+        margin-top: 0;
     }
 
 }
