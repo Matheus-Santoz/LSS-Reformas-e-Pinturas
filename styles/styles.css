@@ -555,10 +555,10 @@ footer {
 }
 
 .form-contact button {
-   background-color: green;
-   border: none;
-   color: white;
-   padding: 2%;
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 2%;
 }
 
 .regions-attended {
@@ -936,6 +936,9 @@ footer {
     text-decoration: none;
 }
 
+.img-container-fixa {
+    height: 600px;
+}
 
 .service-item-p {
     color: rgb(54, 54, 54);
@@ -956,6 +959,14 @@ footer {
 @media (max-width: 768px) {
     .form-contact {
         width: 100%;
+    }
+
+    .img-container-fixa {
+        height: 400px;
+    }
+
+    .carousel-caption{
+        padding: 2%;
     }
 
     .services-page-squares {
