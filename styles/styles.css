@@ -1213,7 +1213,7 @@ footer {
         padding-left: 20px
     }
 
-    .menu-link,
+    .menu-link
     a {
         position: relative;
         font-size: 1.1em;
@@ -1236,6 +1236,10 @@ footer {
         background-color: rgb(48, 84, 201);
     }
 
+    footer a {
+        margin: 0;
+        padding: 0;
+    }
 
     .exit-icon-container {
         width: 30%;
