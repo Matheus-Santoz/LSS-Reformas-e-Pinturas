@@ -78,7 +78,6 @@ footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 20px;
     background-image: url(/images/bg-footer.png);
     background-size: cover;
     width: 100%;
@@ -97,7 +96,6 @@ footer {
 
 .communication-items-wrapper {
     display: flex;
-    flex-direction: column;
     gap: 20px;
 }
 
@@ -106,6 +104,10 @@ footer {
     align-items: center;
     flex-direction: row;
     gap: 5px;
+}
+
+.communication-item i {
+    padding: 10px;
 }
 
 .communication-item a {
@@ -541,7 +543,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     width: 100%;
-    padding: 0% 30px;
+    padding: 0% 50px;
     height: auto;
     justify-self: flex-end;
     margin: auto;
@@ -1031,7 +1033,8 @@ footer {
     }
 
     .footer-divider {
-        padding: 0
+        padding: 30px;
+        grid-template-columns: 1fr;
     }
 
 
@@ -1101,11 +1104,6 @@ footer {
         width: fit-content;
     }
 
-
-
-    .footer-divider {
-        grid-template-columns: 1fr;
-    }
 
     .spacing-text {
         left: 0%;
