@@ -45,7 +45,9 @@
 
 <body>
     <div class="button-orcamento-container fa-bounce">
-        <a href="https://wa.me/5513988725645" target="_blank"><i class="fa-solid fa-brands fa-whatsapp"></i></a>
+        <a class="whatsapp-split-link-class" href="https://wa.me/5513988725645" target="_blank">
+            <i class="fa-solid fa-brands fa-whatsapp"></i>
+        </a>
     </div>
     <header>
         <div class="upper-header">
@@ -76,6 +78,7 @@
                         <li class="menu-link"><a href="index.html">INÍCIO</a></li>
                         <li class="menu-link"><a href="servicos.html">SERVIÇOS</a></li>
                         <li class="menu-link"><a href="#">GALERIA</a></li>
+                        <li class="menu-link"><a href="/blog.html">BLOG</a></li>
                         <li class="menu-link"><a href="#">CONTATOS</a></li>
                     </ul>
                 </div>
@@ -88,13 +91,15 @@
             <li><a href="index.html">INÍCIO</a></li>
             <li><a href="servicos.html">SERVIÇOS</a></li>
             <li><a href="#">GALERIA</a></li>
-            <li><a href="#">BLOG</a></li>
+            <li><a href="/blog.html">BLOG</a></li>
             <li><a href="#">CONTATOS</a></li>
             <div class="whatsapp-invite-container">
-                <button class="whatsapp-invite-button">
-                    <i class="fa-solid fa-brands fa-whatsapp fa-2x"></i>
-                    <p>WhatsApp</p>
-                </button>
+                <div class="whatsapp-invite-button target fade-left">
+                    <a class="whatsapp-split-link-class" target="_blank" href="https://wa.me/5513988725645">
+                        <i class="fa-solid fa-brands fa-whatsapp fa-2x"></i>
+                        Whatsapp
+                    </a>
+                </div>
             </div>
         </ul>
     </nav>
@@ -110,10 +115,12 @@
             </p>
         </div>
         <div class="whatsapp-invite-container">
-            <button class="whatsapp-invite-button target fade-left">
-                <i class="fa-solid fa-brands fa-whatsapp fa-2x"></i>
-                Solicitar orçamento pelo WhatsApp
-            </button>
+            <div class="whatsapp-invite-button target fade-left">
+                <a class="whatsapp-split-link-class" target="_blank" href="https://wa.me/5513988725645">
+                    <i class="fa-solid fa-brands fa-whatsapp fa-2x"></i>
+                    Solicitar orçamento pelo WhatsApp
+                </a>
+            </div>
         </div>
     </div>
     <div class="content-container target">
@@ -375,74 +382,10 @@
     </div>
     <div class="content-container target">
         <section class="general-section">
-            <h2 class="general-title center-element">ÚLTIMAS DO BLOG</h2>
+            <h2 class="general-title center-element">BLOG - ÚLTIMOS ASUUNTOS</h2>
             <div class="content-divider"></div>
             <div class="blog-container">
-                <article class="blog-card">
-                    <div class="img-blog-wrapper">
-                        <img src="images/blog-img2.jpg" alt="Foto blog pintura reforma">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="blog-title">A importância de bons alicerces</h3>
-                        <p class="blog-description">
-                            Especialistas destacam que bons alicerces são fundamentais não apenas para garantir a
-                            estabilidade de uma construção...
-                        </p>
-                        <a href="#" class="read-more">Leia Mais ></a>
-                    </div>
-                </article>
-                <article class="blog-card">
-                    <div class="img-blog-wrapper">
-                        <img src="images/blog-img2.jpg" alt="Foto blog pintura reforma">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="blog-title">A importância de bons alicerces</h3>
-                        <p class="blog-description">
-                            Especialistas destacam que bons alicerces são fundamentais não apenas para garantir a
-                            estabilidade de uma construção...
-                        </p>
-                        <a href="#" class="read-more">Leia Mais ></a>
-                    </div>
-                </article>
-                <article class="blog-card">
-                    <div class="img-blog-wrapper">
-                        <img src="images/blog-img2.jpg" alt="Foto blog pintura reforma">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="blog-title">A importância de bons alicerces</h3>
-                        <p class="blog-description">
-                            Especialistas destacam que bons alicerces são fundamentais não apenas para garantir a
-                            estabilidade de uma construção...
-                        </p>
-                        <a href="#" class="read-more">Leia Mais ></a>
-                    </div>
-                </article>
-                <article class="blog-card">
-                    <div class="img-blog-wrapper">
-                        <img src="images/blog-img2.jpg" alt="Foto blog pintura reforma">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="blog-title">A importância de bons alicerces</h3>
-                        <p class="blog-description">
-                            Especialistas destacam que bons alicerces são fundamentais não apenas para garantir a
-                            estabilidade de uma construção...
-                        </p>
-                        <a href="#" class="read-more">Leia Mais ></a>
-                    </div>
-                </article>
-                <article class="blog-card">
-                    <div class="img-blog-wrapper">
-                        <img src="images/blog-img2.jpg" alt="Foto blog pintura reforma">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="blog-title">A importância de bons alicerces</h3>
-                        <p class="blog-description">
-                            Especialistas destacam que bons alicerces são fundamentais não apenas para garantir a
-                            estabilidade de uma construção...
-                        </p>
-                        <a href="#" class="read-more">Leia Mais ></a>
-                    </div>
-                </article>
+
             </div>
         </section>
     </div>
@@ -477,7 +420,7 @@
                     <h4>Atendemos todas as regiões de São Paulo!</h4>
                     <p class="push-bottom">Entre em contanto conosco pelas redes sociais ou canais de comunicação. Se
                         preferir, preencha o formulário à esquerda, que logo retornaremos!</p>
-                    <div class="communication-channels push-bottom">
+                    <div class="communication-channels">
                         <h5 class="mb-3">Canais de comunicaçao</h5>
                         <div class="communication-items-wrapper">
                             <div class="communication-item">
@@ -514,6 +457,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="content-divider  mb-5 mt-5"></div>
                     <div class="social-media">
                         <div class="communication-channels">
                             <h5 class="mb-3">Nos siga nas redes sociais!</h5>
@@ -544,8 +488,15 @@
                     </div>
                 </div>
             </div>
+            <div class="d-flex flex-column justify-content-center align-items-center text-white text-center copyright">
+                <p>© 2025 | LSS REFORMAS E CONSTRUÇÕES LTDA - Todos os direitos reservados</p>
+                <p>Rua Amongeaba, 3 - Parque Central, São Paulo - SP, CEP 08420-460</p>
+                <p>CNPJ: 33.267.043/0001-97</p>
+            </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="blog.js"></script>
     <script src="styles/styles.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

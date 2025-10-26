@@ -1,5 +1,33 @@
-//transição de fade para elementos à vista na tela
 document.addEventListener('DOMContentLoaded', () => {
+
+    //aleatoridade do número de contato
+    const DISTRIBUTION_THRESHOLD = 70;
+    const MAIN_NUMBER_URL = 'https://wa.me/5513988725645'; // O número principal (70%)
+    const SECONDARY_NUMBER_URL = 'https://wa.me/5511954782603'; // O outro número (30%)
+
+    const whatsappLinks = document.querySelectorAll('.whatsapp-split-link-class');
+
+    if (whatsappLinks.length > 0) {
+
+        const randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        const finalUrl = (randomNumber <= DISTRIBUTION_THRESHOLD)
+            ? MAIN_NUMBER_URL
+            : SECONDARY_NUMBER_URL;
+
+        whatsappLinks.forEach(link => {
+            link.setAttribute('href', finalUrl);
+        });
+
+        if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+                'event': 'whatsapp_split_loaded',
+                'whatsapp_group': (randomNumber <= DISTRIBUTION_THRESHOLD) ? 'Group_70_Main' : 'Group_30_Secondary'
+            });
+        }
+    }
+
+    //transição de fade para elementos à vista na tela
     const targets = document.querySelectorAll('.target');
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -64,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         lastScrollY = currentScrollY;
     });
+
 
 });
 

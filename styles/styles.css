@@ -58,6 +58,7 @@ body {
     transition: transform 0.4s ease-in-out;
 }
 
+
 nav {
     background-color: white;
     position: fixed;
@@ -233,7 +234,6 @@ footer {
 
 .whatsapp-invite-button {
     position: relative;
-    gap: 10px;
     display: flex;
     background-color: rgb(35, 189, 92);
     border: 2px solid rgb(41, 214, 104);
@@ -247,6 +247,7 @@ footer {
     cursor: pointer;
     transition: border 0.3s ease;
 }
+
 
 .whatsapp-invite-button p {
     margin: 0;
@@ -423,6 +424,21 @@ footer {
     height: 100%;
 }
 
+.whatsapp-invite-button a {
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.whatsapp-invite-button a:hover {
+    color: white;
+}
+
 .blog-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 280px));
@@ -488,7 +504,6 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     color: black;
-    overflow: hidden;
     gap: 10px;
 }
 
@@ -946,6 +961,17 @@ footer {
     color: rgb(54, 54, 54);
 }
 
+.copyright{
+    margin-top: 60px;
+}
+
+.blog-page {
+    justify-content: center;
+    padding: 2% 0;
+    width: 50%;
+    margin: auto;
+}
+
 /* 4.1 animação do fundo da seção bg-work */
 @keyframes carrossel-img {
     from {
@@ -967,14 +993,14 @@ footer {
         height: 200px;
     }
 
-    .carousel-caption{
+    .carousel-caption {
         padding: 2%;
         display: flex;
         flex-direction: column;
         font-size: 0.8em;
     }
 
-    .carousel-caption h4{
+    .carousel-caption h4 {
         display: flex;
         flex-direction: column;
         font-size: 1.5em;
