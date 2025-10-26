@@ -6,6 +6,8 @@ textarea {
     resize: none;
 }
 
+
+
 html {
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -411,6 +413,8 @@ footer {
     flex-direction: column;
     justify-content: center;
 }
+
+
 
 .about-item img {
     width: 100%;
@@ -963,15 +967,14 @@ footer {
     color: rgb(54, 54, 54);
 }
 
-.copyright{
+.copyright {
     margin-top: 60px;
 }
 
 .blog-page {
     justify-content: center;
-    padding: 2% 0;
-    width: 50%;
-    margin: auto;
+    padding: 0 30px;
+    margin: 30px 0;
 }
 
 /* 4.1 animação do fundo da seção bg-work */
@@ -985,6 +988,9 @@ footer {
     }
 }
 
+.whatsapp-split-link-class {
+    margin: 0;
+}
 
 @media (max-width: 768px) {
     .form-contact {
@@ -1010,10 +1016,6 @@ footer {
 
     .services-page-squares {
         grid-template-columns: 1fr;
-    }
-
-    .blog-container {
-        justify-content: center;
     }
 
 
@@ -1184,13 +1186,13 @@ footer {
         left: 0;
         z-index: 10000;
         width: 50%;
-        border-bottom-right-radius: 100px;
+        border-bottom-right-radius: 20px;
         height: fit-content;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         background-color: rgb(255, 255, 255);
-        box-shadow: 10px 0px 15px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.3);
     }
 
     .menu-links-container {
@@ -1201,9 +1203,20 @@ footer {
         padding: 0;
     }
 
+    .menu-link {
+        font-size: 1.1em;
+        color: black;
+        padding: 0px 0px 0px 10px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        padding-left: 20px
+    }
+
     .menu-link,
     a {
-        font-size: 1.2em;
+        position: relative;
+        font-size: 1.1em;
         text-decoration: none;
         color: black;
         padding: 0px 0px 0px 10px;
@@ -1211,11 +1224,21 @@ footer {
         display: flex;
         align-items: center;
         margin-bottom: 10px;
+        padding-left: 20px
+    }
+
+    .menu-link a::before {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        left: -2px;
+        background-color: rgb(48, 84, 201);
     }
 
 
     .exit-icon-container {
-        width: 100%;
+        width: 30%;
         height: 5vh;
         border: none;
         background-color: transparent;
@@ -1262,5 +1285,7 @@ footer {
     .content-container {
         margin-top: 0;
     }
+
+
 
 }
