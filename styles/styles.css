@@ -1003,6 +1003,7 @@ footer {
 .grid-container {
     flex-grow: 1;
     display: grid;
+    margin: 3% 0;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
