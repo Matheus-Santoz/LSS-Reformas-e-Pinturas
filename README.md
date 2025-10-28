@@ -58,7 +58,7 @@ Acesse o site em produção:
 
 Para dúvidas sobre o código, contribuições ou informações sobre a empresa:
 
-* **E-mail:** `gmail@gmail.com`
+* **E-mail:** `contato@lssreformas.com.br`
 * **Telefone:** `(11) 2555-255`
 * **WhatsApp:** `(13) 98872-5645`
 
