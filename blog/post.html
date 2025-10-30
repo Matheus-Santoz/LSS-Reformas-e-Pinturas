@@ -2,41 +2,10 @@
 <html lang="pt-BR">
 
 <head>
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-59HR59MF');</script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Dicas de Pintura, Reformas e Construção - LSS Pinturas e Reformas</title>
-    <meta name="description"
-        content="Acompanhe o blog da LSS Pinturas e Reformas e fique por dentro das últimas tendências e dicas sobre pinturas, reformas e construção em São Paulo. Artigos informativos para sua obra!">
-    <meta name="author" content="LSS Pinturas e Reformas">
-    <meta name="robots" content="index, follow">
-    <meta name="keywords"
-        content="blog de reformas, dicas de pintura, construção civil, reformas em são paulo, lss reformas">
-    <meta http-equiv="content-language" content="pt-br">
-    <link rel="canonical" href="https://www.lssreformas.com.br/blog.html">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.lssreformas.com.br/blog.html">
-    <meta property="og:title" content="Blog | Dicas de Pintura, Reformas e Construção - LSS Pinturas e Reformas">
-    <meta property="og:description"
-        content="Acompanhe o blog da LSS Pinturas e Reformas e fique por dentro das últimas tendências e dicas sobre pinturas, reformas e construção em São Paulo. Artigos informativos para sua obra!">
-    <meta property="og:image" content="https://www.lssreformas.com.br/images/logo.png">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.lssreformas.com.br/blog.html">
-    <meta property="twitter:title" content="Blog | Dicas de Pintura, Reformas e Construção - LSS Pinturas e Reformas">
-    <meta property="twitter:description"
-        content="Acompanhe o blog da LSS Pinturas e Reformas e fique por dentro das últimas tendências e dicas sobre pinturas, reformas e construção em São Paulo. Artigos informativos para sua obra!">
-    <meta property="twitter:image" content="https://www.lssreformas.com.br/images/logo.png">
-
+    <title>Carregando...</title>
+    <script src="https://unpkg.com/@supabase/supabase-js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,38 +16,14 @@
         rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/images/logo.png" />
     <link rel="stylesheet" href="/styles/styles.css">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "LSS Pinturas e Reformas",
-      "url": "https://www.lssreformas.com.br",
-      "logo": "https://www.lssreformas.com.br/images/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+55-13-98872-5645",
-        "contactType": "customer service",
-        "areaServed": "BR",
-        "availableLanguage": "Portuguese"
-      },
-      "sameAs": [
-        "https://instagram.com/lss.rle.pinturas",
-        "https://facebook.com/lssreformas",
-        "https://youtube.com/lssreformas",
-        "https://x.com/lssreformas"
-      ]
-    }
-    </script>
 </head>
 
-<body class="bg-repeat-service">
+<body>
     <div class="button-orcamento-container fa-bounce">
         <a class="whatsapp-split-link-class" href="https://wa.me/5513988725645" target="_blank">
             <i class="fa-solid fa-brands fa-whatsapp"></i>
         </a>
     </div>
-
     <header>
         <div class="upper-header">
             <span>LSS PINTURAS E REFORMAS </span>
@@ -86,7 +31,6 @@
             <span>contato@lssreformas.com.br</span>
         </div>
     </header>
-
     <nav>
         <button class="menu-container-mobile" id="menu-clickable">
             <i class="fa-solid fa-bars fa-xl"></i>
@@ -99,15 +43,15 @@
                 <div class="menu-links-container">
                     <a href="index.html">
                         <div class="logo-container-mobile">
-                            <img src="images/logo.png" class="logo" alt="Logo LSS Pinturas e Reformas LTDA">
+                            <img src="/images/logo.png" class="logo" alt="Logo LSS Pinturas e Reformas LTDA">
                         </div>
                     </a>
                     <ul class="menu-links">
-                        <li class="menu-link"><a href="index.html">INÍCIO</a></li>
-                        <li class="menu-link"><a href="servicos.html">SERVIÇOS</a></li>
+                        <li class="menu-link"><a href="/index.html">INÍCIO</a></li>
+                        <li class="menu-link"><a href="/servicos.html">SERVIÇOS</a></li>
                         <li class="menu-link"><a href="#">GALERIA</a></li>
-                        <li class="menu-link"><a href="blog.html">BLOG</a></li>
-                        <li class="menu-link"><a href="contatos.html">CONTATOS</a></li>
+                        <li class="menu-link"><a href="/blog.html">BLOG</a></li>
+                        <li class="menu-link"><a href="/contatos.html">CONTATOS</a></li>
                     </ul>
                 </div>
             </div>
@@ -115,12 +59,11 @@
         <div class="logo-container">
             <img src="/images/logo.png" class="logo" alt="Logo LSS Pinturas e Reformas LTDA">
         </div>
-
         <ul class="menu-links-desktop">
-            <li><a href="index.html">INÍCIO</a></li>
-            <li><a href="servicos.html">SERVIÇOS</a></li>
+            <li><a href="/index.html">INÍCIO</a></li>
+            <li><a href="/servicos.html">SERVIÇOS</a></li>
             <li><a href="#">GALERIA</a></li>
-            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="/blog.html">BLOG</a></li>
             <li><a href="/contatos.html">CONTATOS</a></li>
             <div class="whatsapp-invite-container">
                 <div class="whatsapp-invite-button">
@@ -132,18 +75,25 @@
             </div>
         </ul>
     </nav>
-    <div class="content-container bg-service">
-        <h1 style="font-weight: 700;">
-            BLOG
-        </h1>
-        <div class="content-divider"></div>
-        <p class="center-element mt-4">
-            Leia nossos artigos para se informar sobre a relevância de um bom planejamento
-            nas
-            obras!
-        </p>
+    <main class="post-container">
+        <div class="content-container bg-service m-0"></div>
+        <div class="post-wrapper">
+            <img class="post-image" alt="Imagem da notícia">
+            <span class="image-credit-link"></span>
+            <h1 class="post-title"></h1>
+            <p class="post-date"></p>
+            <div class="post-content"></div>
+        </div>
+    </main>
+    <div class="content-container">
+        <section class="general-section">
+            <h2 class="general-title center-element">Leia também</h2>
+            <div class="content-divider"></div>
+            <div class="blog-container left-suggestions">
+
+            </div>
+        </section>
     </div>
-    <div class="blog-container blog-page"></div>
     <footer>
         <div class="wrap-footer target">
             <p class="complement-text mt-5" style="color: white">Entre em contato para</p>
@@ -159,7 +109,8 @@
                     <iframe class="push-bottom" style="width: 100%;"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.6484898158615!2d-46.426194223839374!3d-23.54514196099817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce65c013afc391%3A0x4875102446b7aed0!2sLSS%20CONSTRUCOES%20E%20REFORMAS%20LTDA!5e0!3m2!1sen!2sbr!4v1761445832676!5m2!1sen!2sbr"
                         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
                 <div class="communication-channels">
                     <div class="wrapper-communication-channels">
@@ -238,7 +189,7 @@
                             </div>
                         </div>
                         <div class="logo-container-footer">
-                            <img src="images/logo.png" class="logo p-2" alt="Logo LSS Pinturas e Reformas LTDA">
+                            <img src="/images/logo.png" class="logo p-2" alt="Logo LSS Pinturas e Reformas LTDA">
                             <p>
                                 Desde 2019, transformando ambientes em São Paulo. A LSS Pinturas e Reformas é sua
                                 parceira
@@ -258,18 +209,9 @@
             <p class="m-0">Rua Amongeaba, 3 - Parque Central, São Paulo - SP, CEP 08420-460</p>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="blog.js"></script>
+
+    <script src="post.js"></script>
     <script src="/styles/styles.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
