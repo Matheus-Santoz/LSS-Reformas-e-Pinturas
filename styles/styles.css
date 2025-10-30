@@ -1098,7 +1098,8 @@ footer {
 .post-content strong {
     font-size: 1.05rem;
     line-height: 1.8;
-    color: rgb(46, 105, 214);
+    color: rgb(24, 59, 124);
+    background-color: rgba(46, 105, 214, 0.2);
 }
 
 .post-content p {
