@@ -80,11 +80,10 @@ footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-image: url(/images/bg-footer.png);
+    background-image: url('../images/bg-footer.png');
     background-size: cover;
     width: 100%;
     height: auto;
-
 }
 
 .wrap-footer {
@@ -153,7 +152,7 @@ footer {
 
 .bg-presentation {
     display: flex;
-    background-image: url('/images/bgImage-presentation.png');
+    background-image: url('../images/bgImage-presentation.png');
     background-size: cover;
     position: relative;
     background-position: center;
@@ -930,7 +929,7 @@ footer {
     color: white;
     justify-content: center;
     align-items: center;
-    background-image: url('/images/bg-footer.png');
+    background-image: url('../images/bg-footer.png');
     height: 300px;
     width: 100%;
     margin-top: 105px;
@@ -1140,7 +1139,7 @@ footer {
 }
 
 .left-suggestions * {
-        border-radius: 0;
+    border-radius: 0;
 }
 
 @keyframes carrossel-img {
@@ -1251,7 +1250,7 @@ footer {
     }
 
     .bg-presentation {
-        background-image: url('/images/bgImage-presentation-center.png');
+        background-image: url('../images/bgImage-presentation-center.png');
         align-items: center;
         padding: 0 10px;
     }
