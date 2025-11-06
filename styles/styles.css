@@ -1335,6 +1335,12 @@ footer {
         display: none;
     }
 
+    .wrap-squares,
+    .services-page-item,
+    .about-item {
+        padding: 0px 20px 0px 20px;
+    }
+
     .logo-container-mobile {
         width: fit-content;
         margin-left: 10px;
@@ -1384,7 +1390,7 @@ footer {
         transition: left 0.3s ease;
     }
 
-    
+
 
     .shadow-menu {
         position: absolute;
