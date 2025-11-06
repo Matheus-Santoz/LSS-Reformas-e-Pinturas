@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let lastScrollY = window.scrollY;
 
+    //impede o scroll no viewport mobile caso o menu esteja aberto (quebrado)
     window.addEventListener('scroll', () => {
 
         if (window.innerWidth <= 768) {
@@ -93,7 +94,37 @@ document.addEventListener('DOMContentLoaded', () => {
         lastScrollY = currentScrollY;
     });
 
+    const todosOsCarrosseis = document.querySelectorAll('.portfolio-item');
 
+    todosOsCarrosseis.forEach(carrossel => {
+
+        const wrapper = carrossel.querySelector('.card-portfolio-wrapper');
+        const btnLeft = carrossel.querySelector('.carousel-btn.left');
+        const btnRight = carrossel.querySelector('.carousel-btn.right');
+
+        const scrollAmount = 320;
+
+        btnLeft.addEventListener('click', () => {
+            wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+
+        btnRight.addEventListener('click', () => {
+            wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        const galeriaContainer = carrossel.querySelector('.galeria-imagens');
+
+        if (galeriaContainer) {
+
+            lightGallery(galeriaContainer, {
+                plugins: [lgFullscreen],
+                speed: 500,
+                download: false,
+                selector: '.link-gallery'
+            });
+        }
+
+    });
 
 
 });

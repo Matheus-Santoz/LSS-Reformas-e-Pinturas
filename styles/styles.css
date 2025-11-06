@@ -6,8 +6,6 @@ textarea {
     resize: none;
 }
 
-
-
 html {
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -28,20 +26,12 @@ body {
     padding: 0;
 }
 
-/* 1.1 utilitários*/
-
-
-
-
 .content-divider {
     width: 10%;
     margin: 1% 0% 1% 0%;
     height: 2px;
     background-color: rgb(255, 136, 0);
 }
-
-
-/* 2. layout principal*/
 
 .upper-header {
     color: white;
@@ -62,7 +52,7 @@ body {
 
 
 nav {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     position: fixed;
     top: 25px;
     left: 0;
@@ -73,6 +63,7 @@ nav {
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 18px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(60px);
     transition: transform 0.4s ease-in-out;
 }
 
@@ -80,11 +71,10 @@ footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-image: url(/images/bg-footer.png);
+    background-image: url('../images/bg-footer.png');
     background-size: cover;
     width: 100%;
     height: auto;
-
 }
 
 .wrap-footer {
@@ -95,8 +85,6 @@ footer {
     height: 100%;
     width: 100%;
 }
-
-
 
 .communication-items-wrapper {
     display: flex;
@@ -153,7 +141,7 @@ footer {
 
 .bg-presentation {
     display: flex;
-    background-image: url('/images/bgImage-presentation.png');
+    background-image: url('../images/bgImage-presentation.png');
     background-size: cover;
     position: relative;
     background-position: center;
@@ -215,7 +203,8 @@ footer {
     animation: carrossel-img 40s linear infinite alternate;
 }
 
-/* 2.1 botoes para contato */
+
+
 .button-orcamento-container {
     position: fixed;
     display: flex;
@@ -294,7 +283,6 @@ footer {
     display: flex;
     align-self: flex-start;
     justify-self: flex-end;
-
     padding: 0% 30px;
 }
 
@@ -320,7 +308,6 @@ footer {
     width: 150px;
     height: 150px;
 }
-
 
 .logo {
     height: 70px;
@@ -357,7 +344,6 @@ footer {
     display: none;
 }
 
-/* 3. conteúdos textuais*/
 .general-title {
     font-size: 2em;
     width: 100%;
@@ -409,8 +395,6 @@ footer {
     font-size: 1em;
 }
 
-
-
 .work-content {
     justify-content: center;
     align-items: center;
@@ -431,7 +415,6 @@ footer {
     overflow: hidden;
 }
 
-/* 3.1 componentes da seção */
 .about-item {
     width: 45%;
     min-height: 100%;
@@ -439,8 +422,6 @@ footer {
     flex-direction: column;
     justify-content: center;
 }
-
-
 
 .about-item img {
     width: 100%;
@@ -554,7 +535,6 @@ footer {
     box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.1);
 }
 
-
 .square-item p {
     justify-content: center;
     display: flex;
@@ -645,8 +625,6 @@ footer {
     animation: kick 2s infinite alternate ease-in-out;
 }
 
-
-
 .services-text {
     display: block;
     flex-wrap: wrap;
@@ -662,7 +640,6 @@ footer {
     width: auto;
     height: 100%;
 }
-
 
 .alter-square {
     display: flex;
@@ -689,14 +666,12 @@ footer {
 
 }
 
-
 .left-content {
     display: flex;
     align-items: left;
     justify-content: left;
 }
 
-/* 4 animacoes */
 .target {
     opacity: 0;
     transform: translateY(50px);
@@ -733,8 +708,6 @@ footer {
     transform: translateY(0);
 }
 
-
-
 .heavy-element {
     color: white;
     margin-top: 30px;
@@ -753,11 +726,9 @@ footer {
     align-items: center;
 }
 
-
 .alter-wrap-squares {
     width: 100%;
 }
-
 
 .services-container {
     display: flex;
@@ -767,7 +738,6 @@ footer {
     align-items: center;
 }
 
-/* Container de cards na página de serviços */
 .services-page-squares {
     grid-template-columns: repeat(2, 1fr);
     color: black;
@@ -923,14 +893,13 @@ footer {
     justify-content: center;
 }
 
-/*styles da pagina de serviços*/
 .bg-service {
     display: flex;
     flex-direction: column;
     color: white;
     justify-content: center;
     align-items: center;
-    background-image: url('/images/bg-footer.png');
+    background-image: url('../images/bg-footer.png');
     height: 300px;
     width: 100%;
     margin-top: 105px;
@@ -1119,7 +1088,7 @@ footer {
 }
 
 .image-credit-link {
-    font-size: 0.85em;
+    font-size: 0.6em;
 }
 
 .wrap-suggestions {
@@ -1140,7 +1109,87 @@ footer {
 }
 
 .left-suggestions * {
-        border-radius: 0;
+    border-radius: 0;
+}
+
+.card-portfolio-carousel {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    margin: 30px 0;
+
+}
+
+.card-portfolio-wrapper {
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 5px;
+    padding: 10px;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    z-index: 1;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.link-gallery {
+    transition: all 0.3s ease-in-out;
+    filter: brightness(75%);
+}
+
+.link-gallery:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+    margin: 0 1.5%;
+    filter: brightness(100%);
+}
+
+.card-portfolio {
+    background-color: rgb(95, 95, 95);
+    flex: 0 0 250px;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.2);
+    height: 300px;
+    aspect-ratio: 16 / 9;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: rgb(57, 100, 216);
+    font-size: 3rem;
+    padding: 12px 20px;
+    cursor: pointer;
+    z-index: 2;
+    width: 60px;
+    height: 100%;
+}
+
+.carousel-btn:focus {
+    outline: none;
+}
+
+.carousel-btn.right {
+    right: 0;
+    background-image: linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+}
+
+.carousel-btn.left {
+    left: 0;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+}
+
+.portfolio-item {
+    padding: 0px 50px;
+    margin: 4vh 0;
 }
 
 @keyframes carrossel-img {
@@ -1159,7 +1208,17 @@ footer {
 
 @media (max-width: 768px) {
 
+    .card-portfolio {
+        height: 180px;
+    }
 
+    .carousel-btn {
+        width: auto;
+    }
+
+    .portfolio-item {
+        padding: 0;
+    }
 
     .form-contact {
         width: 100%;
@@ -1168,6 +1227,8 @@ footer {
     .img-container-fixa {
         height: 200px;
     }
+
+
 
     .communication-channels {
         align-items: flex-start;
@@ -1189,8 +1250,6 @@ footer {
     .services-page-squares {
         grid-template-columns: 1fr;
     }
-
-
 
     .worker-bg {
         display: none;
@@ -1251,7 +1310,7 @@ footer {
     }
 
     .bg-presentation {
-        background-image: url('/images/bgImage-presentation-center.png');
+        background-image: url('../images/bgImage-presentation-center.png');
         align-items: center;
         padding: 0 10px;
     }
@@ -1265,14 +1324,11 @@ footer {
         margin-top: 20%;
     }
 
-
-
     .fade-bg {
         background-image: linear-gradient(to bottom, rgb(3, 46, 110) 20%, rgba(3, 46, 110, 0) 100%);
         width: 100%;
 
     }
-
 
     .logo-container {
         display: none;
@@ -1281,9 +1337,6 @@ footer {
     .logo-container-mobile {
         width: fit-content;
     }
-
-
-
 
     .spacing-text {
         left: 0%;
@@ -1343,7 +1396,6 @@ footer {
         visibility: hidden;
         background-color: rgba(0, 0, 0, 0.5);
     }
-
 
     .wrapper-communication-channels {
         max-width: 100%;
@@ -1455,6 +1507,10 @@ footer {
         padding: 0;
         margin: 0;
         height: 100%;
+    }
+
+    .btn-icon {
+        display: none;
     }
 
     .back-btn {
