@@ -1138,14 +1138,38 @@ footer {
 
 .link-gallery {
     transition: all 0.3s ease-in-out;
-    filter: brightness(75%);
 }
 
 .link-gallery:hover {
     transition: all 0.3s ease-in-out;
-    transform: scale(1.1);
-    margin: 0 1.5%;
-    filter: brightness(100%);
+    margin: 0 5px;
+}
+
+.link-gallery.destaque {
+    position: relative;
+}
+
+.link-gallery.destaque::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 4px solid gold;
+
+}
+
+.link-gallery.destaque::after {
+    content: 'DESTAQUE \2605';
+    position: absolute;
+    width: fit-content;
+    font-weight: 500;
+    color: black;
+    border-bottom-right-radius: 10px;
+    padding: 5px;
+    background-color: gold;
+    top: 0;
+    left: 0%;
+    box-shadow: 1px 1px 8px gold;
 }
 
 .card-portfolio {
@@ -1193,6 +1217,10 @@ footer {
     margin: 4vh 0;
 }
 
+.whatsapp-split-link-class {
+    margin: 0;
+}
+
 @keyframes carrossel-img {
     from {
         transform: translateX(0%);
@@ -1203,9 +1231,6 @@ footer {
     }
 }
 
-.whatsapp-split-link-class {
-    margin: 0;
-}
 
 @media (max-width: 768px) {
 
