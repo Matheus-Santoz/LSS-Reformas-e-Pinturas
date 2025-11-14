@@ -48,7 +48,7 @@ A LSS Pinturas e Reformas oferece uma ampla gama de serviços, com páginas dedi
 
 Acesse o site em produção:
 
-**lssreformas.vercel.app**
+**lssreformas.com.br**
 
 </div>
 
